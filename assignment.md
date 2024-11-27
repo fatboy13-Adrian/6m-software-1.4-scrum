@@ -36,7 +36,6 @@ References
 
 Scenario 2:
 Write ten (10) user stories for a book-borrowing website for a library. Write it in the format: `As a ____, I want to ____, so that _____`.
-
 1. As a library user, I want to find books available in all library branches, so that I can find the book the book I need at a library branch that is near my home.
 2. As a library user, I want to reserve books online, so that I can collect the book at my free time from the library branch that is near to my home.
 3. As a library user, I want to receive notifications / updates on book's availability, so that I can make plans to collect them.

@@ -2,9 +2,9 @@
 
 ### Brief
 
-Write your answers for each scenario:
+Write your answers for each question:
 
-Scenario 1:
+Question 1:
 Imagine you are hired by a startup company for a school to implement their IT infrastructure as their IT consultant. n your own words (300 words or less), describe how could implementing Scrum help their IT team improve their productivity.
 
 By implementing scrum, it can enhance productivity of the IT team in a startup school by fostering better collaboration, set clear goals and adaptability. 
@@ -24,17 +24,18 @@ Adaptability
 - By using scrum's iterative approach, it allows IT team to regularly review and adjust their plans so that they can respond effectively to new requirements or challenges like a sudden need to setup an online learning platform.
 
 Continuous improvement (CI)
-- Sprint retrospective at end of each iteration allows the IT team to relfect on what was done well and what can be improve upon.
+- Sprint retrospective at end of each iteration allows the IT team to reflect on what was done well and what can be improve upon.
 - This would provide constant feedback loops that promotes learning and enhancing efficiency over time.
 
-Customer - centric apporach
-- Scrum emphaizes on delivering functional increments on a regular basis, which ensures that all stakeholders receive usable outputs and provide feedback.
-- It will help IT team to focus on meeting the acutal needs within the project.
+Customer - centric approach
+- Scrum emphasizes on delivering functional increments on a regular basis, which ensures that all stakeholders receive usable outputs and provide feedback.
+- It will help IT team to focus on meeting the actual needs within the project.
 
 References
 - https://www.scrum.org/learning-series/what-is-scrum/
 
-Scenario 2:
+
+Question 2:
 Write ten (10) user stories for a book-borrowing website for a library. Write it in the format: `As a ____, I want to ____, so that _____`.
 1. As a library user, I want to find books available in all library branches, so that I can find the book the book I need at a library branch that is near my home.
 2. As a library user, I want to reserve books online, so that I can collect the book at my free time from the library branch that is near to my home.
@@ -56,6 +57,27 @@ References:
 - https://www.nlb.gov.sg/main/services/Loans-and-Reservations
 - https://www.nlb.gov.sg/main/site/discovereads/children
 - https://www.nlb.gov.sg/main/site/discovereads/MTL/Chinese/reading-recommendations
+
+Question 3: 
+Define [Acceptance Criteria](https://resources.scrumalliance.org/Article/need-know-acceptance-criteria) for 3 to 5 user stories out of the 10 user stories you have defined.
+1. As a library user, I want to find books available in all library branches, so that I can find the book the book I need at a library branch that is near my home.
+    - Users must be able to search for books by title, author, genre, or ISBN, with results displayed from all library branches.
+    - Search results should show the availability status of the book for each branch.
+    - The system should display the branch locations.
+    - If the book is not available in any branch, the system should display a message: "The requested book is currently unavailable at all branches."
+
+2. As a library user, I want to reserve books online, so that I can collect the book at my free time from the library branch that is near to my home.
+    - Users must be able to reserve books through the library's online platform by selecting a specific book and library branch.
+    - Users should have the option to choose a preferred library branch for book pickup based on proximity to their home / current location.
+    - The system must confirm the availability of the selected book and notify the user if it is already reserved or unavailable.
+    - Once a reservation is made, the system should provide a confirmation message, including the reservation details (book title, branch, and pickup deadline).
+    - Users should be able to cancel or modify their reservations online before the pickup deadline if their plans change.
+
+3. As a library user, I want to receive notifications / updates on book's availability, so that I can make plans to collect them.
+    - Users should receive notifications when a reserved book becomes available or if the book's status changes.
+    - Notifications should be sent via the user’s preferred communication method, such as email / SMS.
+    - Notifications must include key details such as the book title, library branch location, and the deadline for collecting the book.
+    - Notifications should be sent promptly within 1 hour of a status change to ensure users have sufficient time to plan their visit.
 
 ### Submission 
 

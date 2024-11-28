@@ -79,6 +79,19 @@ Define [Acceptance Criteria](https://resources.scrumalliance.org/Article/need-kn
     - Notifications must include key details such as the book title, library branch location, and the deadline for collecting the book.
     - Notifications should be sent promptly within 1 hour of a status change to ensure users have sufficient time to plan their visit.
 
+4. As a library user, I want to be able to renew my borrowed books online, so that I can extend the loan period without visiting the library.
+    - Users should be able to receive notifications when a borrowed book's deadline is nearing.
+    - Notifications should be sent via the user's preferred communication method, such as email / SMS.
+    - Users must be able to renew books borrowed online before deadline if they intend to continue to read the borrowed books.
+    - Once a book is renewed, the system should provide a confirmation message, including the reservation details (book title, branch, and pickup deadline).
+
+5. As a library user, I want to be able to view my borrowing history, so that I can track my book reading records and avoid borrowing duplicates.
+    - Users must be able to access their borrowing history from their account dashboard on the library website or mobile app.
+    - Borrowing history must include key information such as title, author, date borrowed, date returned and overdue status.
+    - Display borrowing history in chronlogical order, with most recent information on top.
+    - Users should be able to find their borrowing history by title, author or date borrowed and filter by overdue books.
+    - Users should be able to receive notifications if the same book was borrowed before in their borrowing history as this will help to avoid duplicates. 
+
 ### Submission 
 
 - Submit the URL of the GitHub Repository that contains your work to NTU black board.

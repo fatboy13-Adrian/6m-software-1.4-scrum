@@ -104,7 +104,8 @@ _Example of Referencing Classmate_
 
 Referenced the code block below from Terence.
 ```js
-    function printMe(){
+    function printMe()
+    {
         console.log("I am a reference example");
     }
 ```

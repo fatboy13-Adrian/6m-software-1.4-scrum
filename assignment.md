@@ -62,40 +62,123 @@ References:
 Question 3: 
 Define [Acceptance Criteria](https://resources.scrumalliance.org/Article/need-know-acceptance-criteria) for 3 to 5 user stories out of the 10 user stories you have defined.
 1. As a library user, I want to find books available in all library branches, so that I can find the book I need at a library branch that is near my home.
-    - Users must be able to search for books by title, author, genre, or ISBN, with results displayed from all library branches.
-    - Search results should show the availability status of the book for each branch.
-    - The system should display the branch locations.
-    - If the book is not available in any branch, the system should display a message: "The requested book is currently unavailable at all branches."
+Find for a book that is available in 1 branch:
+    - Given that the user is on book search page
+    - When user enter title or author
+    - Then system to display branch where book is available
 
+Find a book that is not available:
+    - Given that user is on book search page
+    - When user find a book that is unavailable in any branch
+    - Then system should display message "Book is unavailble"
+
+Filter by branch
+    - Given that user is on book search page
+    - When user select a specific library branch filter
+    - Then system should display only books available in that branch
 
 2. As a library user, I want to reserve books online, so that I can collect the book in my free time from the library branch that is near to my home.
-    - Users must be able to reserve books through the library's online platform by selecting a specific book and library branch.
-    - Users should have the option to choose a preferred library branch for book pickup based on proximity to their home / current location.
-    - The system must confirm the availability of the selected book and notify the user if it is already reserved or unavailable.
-    - Once a reservation is made, the system should provide a confirmation message, including the reservation details (book title, branch, and pickup deadline).
-    - Users should be able to cancel or modify their reservations online before the pickup deadline if their plans change.
+Reserve a book successfully
+    - Given that user had logged into their user account
+    - And book is available for user to make Reservation
+    - When user click on reserve button and select a branch
+    - Then system should confirm reservation and display pickup date and branch
 
+Attempt to reserve a book that is already being reserved
+    - Given that user is viewing book details
+    - And book is already reserved by another user
+    - When user attepmts to reserve book
+    - Then system should display message "Book is reserved by another user"
+
+Reserve a book without select branch
+    - Given that user had logged into their user account
+    - When user tries to reserve a book without branch selection
+    - System should display message "Please select a branch"
 
 3. As a library user, I want to receive notifications / updates on book's availability, so that I can make plans to collect them.
-    - Users should receive notifications when a reserved book becomes available or if the book's status changes.
-    - Notifications should be sent via the user’s preferred communication method, such as email / SMS.
-    - Notifications must include key details such as the book title, library branch location, and the deadline for collecting the book.
-    - Notifications should be sent promptly within 1 hour of a status change to ensure users have sufficient time to plan their visit.
+Opt into receiving availability notifications
+    - Given that user is logged into their user account
+    - When user attempts to search for a book that is unavailble
+    - Then system should provide options for user to subscribe to book availability notification
 
+Received book notification when book is available
+    - Given that user had subscribed to availability notification for a specific book
+    - And book becomes available
+    - When system sends book available notification
+    - Then user should receive notification by email or SMS with instructions for pickup
+
+Unsubscribe notification availability
+    - Given that user had subscribed to availability notification for a book
+    - When user choose to unsubscribe availability notification
+    - Then system should stop sending availability notification and confirm cancellation with user
 
 4. As a library user, I want to be able to renew my borrowed books online, so that I can extend the loan period without visiting the library.
-    - Users should be able to receive notifications when a borrowed book's deadline is nearing.
-    - Notifications should be sent via the user's preferred communication method, such as email / SMS.
-    - Users must be able to renew books borrowed online before the deadline if they intend to continue to read the borrowed books.
-    - Once a book is renewed, the system should provide a confirmation message, including the reservation details (book title, branch, and pickup deadline).
+Renew loan successfully
+    - Given that user had logged into their user account
+    - And book borrowed is eligible for early renewal
+    - When user navigate to "my borrowed books" section and click renew button for a book
+    - Then system should extend loan period by the allowed duration and display new due date
 
+Attempt to renew overdue book
+    - Given that user is logged into their user account
+    - And loan period had expired
+    - When user tries to renew an overdue book
+    - Then system should display message "This book cannot be renewed as it is overdue. Please contact library"
+
+Renew book without remaining renewals
+    - Given that user is logged into their user account
+    - And book had reached its maximum number of renewals allowed
+    - When user tries to click on renew button
+    - Then system shoud display message "Renewal limit had been reached. Please return book"
 
 5. As a library user, I want to be able to view my borrowing history, so that I can track my book reading records and avoid borrowing duplicates.
-    - Users must be able to access their borrowing history from their account dashboard on the library website or mobile app.
-    - Borrowing history must include key information such as title, author, date borrowed, date returned and overdue status.
-    - Display borrowing history in chronological order, with most recent information on top.
-    - Users should be able to find their borrowing history by title, author or date borrowed and filter by overdue books.
-    - Users should be able to receive notifications if the same book was borrowed before in their borrowing history as this will help to avoid duplicates.
+View history
+    - Given that user had logged into their user account
+    - When user navigate to browsing history section
+    - Then system should show the browsing history of previously borrowned books with details such as author, borrowed / return dates and title
+
+Find book within borrowing history
+    - Given that user had logged into their user account
+    - When user enter a keyword in search branch
+    - Then system should filter and display information that matches the keyword on search branch
+
+View borrowing history statistics
+    - Given that user is on borrowing history page
+    - When user access their borrowing history
+    - Then system should optionally provide a summary of borrowing patterns
+
+Export browsing history
+    - Given that user is on browsing history page
+    - When user click export button
+    - Then system should generate a CSV/PDF file containing the browsing history
+
+Question 4
+Define story points based on the ACs.
+1. As a library user, I want to find books available in all library branches, so that I can find the book I need at a library branch that is near my home.
+    Find for a book that is available in 1 branch: 5 points
+    Find a book that is not available: 2 points
+    Filter by branch: 5 points
+
+2. As a library user, I want to reserve books online, so that I can collect the book in my free time from the library branch that is near to my home.
+    Reserve a book successfully: 5 points
+    Attempt to reserve a book that is already being reserved: 3 points
+    Reserve a book without select branch: 2 points
+
+3. As a library user, I want to receive notifications / updates on book's availability, so that I can make plans to collect them.
+    Opt into receiving availability notifications: 5 points
+    Received book notification when book is available: 6 points
+    Unsubscribe notification availability: 2 points
+
+4. As a library user, I want to be able to renew my borrowed books online, so that I can extend the loan period without visiting the library.
+    Renew loan successfully: 5 points
+    Attempt to renew overdue book: 3 points
+    Renew book without remaining renewals: 3 points
+
+5. As a library user, I want to be able to view my borrowing history, so that I can track my book reading records and avoid borrowing duplicates.
+    View history: 5 points
+    Find book within borrowing history: 2 points
+    View borrowing history statistics: 4 points
+    Export browsing history: 8 points
 
 
 ### Submission 

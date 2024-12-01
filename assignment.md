@@ -180,7 +180,6 @@ Define story points based on the ACs.
     View borrowing history statistics: 4 points
     Export browsing history: 8 points
 
-
 ### Submission 
 
 - Submit the URL of the GitHub Repository that contains your work to NTU black board.
